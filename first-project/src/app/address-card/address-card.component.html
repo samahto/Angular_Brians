@@ -1,0 +1,23 @@
+<!-- <p>{{user.name}}</p>
+<p>{{user.title}}</p>
+<p>{{user.address}}</p> -->
+<!-- <div *ngIf = "user.phoneNos.length > 0">  -->  <!-- In javascript lang we don'have to do for truthy 
+& falsy values see angular 6 basics 12 java brains  --> 
+  <!-- or both are same thing -->
+    <!-- <div *ngIf = "user.phoneNos.length"> 
+<p>Phone:</p>
+<p *ngFor="let phoneno of user.phoneNos">{{phoneno}}</p>
+</div> -->
+<!-- ----------------------------------------------------------------- -->
+<div class="address-card">
+<h1 class="name">{{user.name}}</h1>
+<h3 class="designation">{{user.designation}}</h3>
+<button (click)=toggleCollapse()>Expand/Collapse</button>
+<div *ngIf="!isCollapsed">
+<p class="address">{{user.address}}</p>
+<div class="phone" *ngIf = "user.phoneno.length"> 
+<p>Phone:</p>
+<p *ngFor="let phone of user.phoneno">{{phone}}</p>
+</div>
+</div>
+</div>
